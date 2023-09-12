@@ -18,5 +18,7 @@ const person = {
     firstName: 'Kadi',
     lastName: 'Tamm',
 } 
-
+// output = Kadi
 console.log(person.firstName)
+// add new properties
+person.department = 'IT Akadeemia'
