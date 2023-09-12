@@ -28,9 +28,4 @@ result = Math.random()
 // random, output = (0...10]  
 result = Math.floor(Math.random() * 11)
 
-
-
-
-
-
 console.log(result)
