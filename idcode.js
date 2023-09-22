@@ -1,6 +1,6 @@
 // function 
 
-let id = '34501234215'
+let id = '50609212790'
 let gender
 
 function customerGender(id){
@@ -137,8 +137,6 @@ function customerControlcode(id){
     } 
 }  
 }
-
-
 
 console.log('The customer is a ' + (customerGender(id)) + '.')
 console.log("They were born in the year '" + (customerBirthyear(id)) + '.')
