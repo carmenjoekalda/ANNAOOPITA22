@@ -112,16 +112,33 @@ function customerOrder(id){
     }
 }
 
-
 function customerControlcode(id){
     if (customerGender != 'Something went wrong'){
         // returns the idcode control code
         birthControlcode = id.slice(10, 11);
-        return birthControlcode
+        const first_array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 1];
+        const second_array = [3, 4, 5, 6, 7, 8, 9, 1, 2, 3];
+        let id_array = []
+        for (let i = 0; i < 10; i++){
+            id_array.push(Number(id[i]));
+        }
+        let control = 0
+        for (let i = 0; i < 10; i++){
+            control += id_array[i] * second_array[i];  
+        } 
+        if (control % 11 === 10) {
+            control = 0;
+            for (let i = 0; i < 10; i++){
+                control += id_array[i] * second_array[i];  
+            } 
+            return control % 11;
     } else {
-        return 'Something went wrong'
+        return control % 11;
     } 
-} 
+}  
+}
+
+
 
 console.log('The customer is a ' + (customerGender(id)) + '.')
 console.log("They were born in the year '" + (customerBirthyear(id)) + '.')
